@@ -26,7 +26,6 @@ public class Exercicio1 extends BaseTest {
 
         driver.findElement(By.xpath("//button[text()='Add Element']")).click();
 
-
         WebElement btnDelete = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.className("added-manually"))
         );
