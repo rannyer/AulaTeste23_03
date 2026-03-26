@@ -2,9 +2,11 @@ package org.example.pom.exemplo1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     private By usernameInput =  By.id("username");
     private By passwordInput =  By.id("password");
@@ -12,8 +14,9 @@ public class LoginPage {
     private By mensagem =  By.id("flash");
 
 
-    public LoginPage(WebDriver driver){
+    public LoginPage(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
+        this.wait =  wait;
     }
 
     public void acessarPagina(){
