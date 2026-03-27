@@ -23,7 +23,7 @@ public class BaseTest {
     }
     @AfterEach
     void tearDown() throws InterruptedException {
-        Thread.sleep(3000);
+
         if(driver!=null){
             driver.quit();
         }
