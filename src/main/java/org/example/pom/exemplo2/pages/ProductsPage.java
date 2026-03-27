@@ -13,7 +13,7 @@ public class ProductsPage extends BasePage {
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement addBackPackButton;
 
-    private HeaderComponent header;
+    public HeaderComponent header;
 
     public ProductsPage(WebDriver driver) {
         super(driver);

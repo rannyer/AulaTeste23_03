@@ -1,3 +1,4 @@
+import org.example.pom.exemplo2.pages.CartPage;
 import org.example.pom.exemplo2.pages.LoginPage;
 import org.example.pom.exemplo2.pages.ProductsPage;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,18 @@ public class ProducTest extends BaseTest {
                 .loginAs("standard_user", "secret_sauce" );
 
         assertEquals("Products",productsPage.getTitle());
+
+        productsPage.addBackBackToCart();
+
+        assertTrue(productsPage.header.hasItemsInCart());
+
+        assertEquals("1", productsPage.header.getCartItemsCount());
+
+        CartPage cartPage =  productsPage.header.openCart();
+
+        assertEquals("Your Cart", cartPage.getTitle());
+        assertTrue(cartPage.containsBackpack());
+
 
 
     }
